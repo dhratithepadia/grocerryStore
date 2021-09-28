@@ -1,0 +1,15 @@
+<p>product-list works!</p>
+<h1>.hello</h1>
+<div class="row" style="padding-top: 20px;" >
+    <div class="col-lg-4 col-md-6 mb-4" *ngFor="let d of data | filter:filteredString">
+    <div class="card h-100">
+        <a href="#!"><img class="card-img-top" [src]="d?.filename"></a>
+            <div class="card-body">
+                <h4 class="card-title" (click)="Onclick()"><a routerLink="">{{d.title}}</a></h4>
+                <h5>{{d.price | currency:'INR'}}</h5>
+                <p class="card-text">{{d.description}}</p>
+            </div>
+    <div class="card-footer"><small class="text-muted">★ ★ ★ ★ ☆</small></div>
+    <!-- <p><button (click)="handleAddToCart(d.id, d.title,d.price)"> Add to Cart</button></p> -->
+    </div>
+</div>
